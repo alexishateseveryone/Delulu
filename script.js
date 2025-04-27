@@ -67,7 +67,7 @@ function changeContent() {
               </div>
               <div class="crush-message-content">
                 <span class="crush-name">${formData.name}</span>
-                <div class="message-bubble crush-bubble">
+                <div class="message-bubble crush-bubble" id="crushMessage">
                   <p>I love you too :))</p>
                 </div>
               </div>
@@ -146,6 +146,30 @@ function previewImage() {
     reader.readAsDataURL(file); // Convert image to base64
   }
 }
+
+const crushMessages = [
+    "I love you too :))",
+    "Miss na kita, kita us",
+    "Aww (sad emoji)"
+  ];
+  
+  // Function to get a random message
+  function getRandomMessage() {
+    const randomIndex = Math.floor(Math.random() * crushMessages.length);
+    return crushMessages[randomIndex];
+  }
+  
+  // Function to update crush's message
+  function displayCrushMessage() {
+    const crushMessageElement = document.getElementById("crushMessage");
+    const randomMessage = getRandomMessage();
+    crushMessageElement.textContent = randomMessage;
+  }
+  
+  // Call the function to display a random message when the page loads
+  window.onload = function() {
+    displayCrushMessage();
+  };
 
 // Load first step when the page loads
 changeContent();
