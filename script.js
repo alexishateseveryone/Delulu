@@ -74,7 +74,7 @@ function changeContent() {
             </div>
           </div>
           <p class="mt-3">Anlala mo! Usad kana yah</p>
-           <button id="randomizeButton" class="btn btn-primary">Get Random Message</button>
+        
         `;
     }
     
@@ -147,34 +147,6 @@ function previewImage() {
     reader.readAsDataURL(file); // Convert image to base64
   }
 }
-
-// Array of random chat messages
-const crushMessages = [
-  "I love you too :))",
-  "Miss na kita, kita us",
-  "Aww (sad emoji)"
-];
-
-// Function to get a random message
-function getRandomMessage() {
-  const randomIndex = Math.floor(Math.random() * crushMessages.length);
-  return crushMessages[randomIndex];
-}
-
-// Function to update crush's message
-function displayCrushMessage() {
-  const crushMessageElement = document.getElementById("crushMessage");
-  const randomMessage = getRandomMessage();
-  crushMessageElement.textContent = randomMessage;
-}
-
-// Event listener for button click to trigger the random message
-document.getElementById("randomizeButton").addEventListener("click", displayCrushMessage);
-
-// Optional: Call the function to display a random message when the page loads
-window.onload = function() {
-  displayCrushMessage(); // This line is optional. Remove it if you don't want an initial message.
-};
 
 
 // Load first step when the page loads
