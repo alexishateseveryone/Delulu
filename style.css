@@ -1,0 +1,179 @@
+/* Body Background */
+body {
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Form Card */
+  .form-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+    align-items: center;
+    margin: 20px auto; /* Center the form card */
+  }
+  
+  .form-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* Button and Input Fields */
+  .btn {
+    border-radius: 25px;
+    width: 85px;
+    float: right;
+    margin: 5px;
+  }
+  
+  .form-control {
+    border-radius: 25px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    height: 30px;
+    text-align: center;
+    color: rgb(39, 39, 39);
+    font-weight: bold;
+    width: 300px;
+  }
+  
+  /* Fade In Animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Album Cover Styling */
+  .album-cover {
+    width: 250px; /* Change size to your preference */
+    height: 250px;
+    border-radius: 50%; /* Circular crop */
+    object-fit: cover; /* Ensures the image covers the whole circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for album cover vibe */
+    filter: grayscale(50%) sepia(50%); /* Gives the picture an album feel */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom-in on hover */
+  }
+  
+  .album-cover:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Card Image Container */
+  .card-image-container {
+    position: relative; /* To position the text over the image */
+    width: 100%;
+    height: 300px; /* You can adjust the height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Crush Name Styling */
+  .crush-name {
+    position: absolute;
+    top: 128px;  /* Adjust position above the message */
+    left: 66px;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Chat Container */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px; /* Optional: Set a max-width for responsiveness */
+    margin: 20px auto; /* Center the chat container */
+  }
+  
+  /* User's Message Bubble */
+  .user-message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; /* Align user message to the right */
+    width: 100%;
+  }
+  
+  .message-bubble {
+    max-width: 100%; /* Adjust bubble size to fill available space */
+    padding: 10px 15px;
+    border-radius: 35px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    height: 45px;
+  }
+  
+  .user-bubble {
+    background-color: #0078FF;
+    color: white;
+    align-self: flex-end; /* Align the user’s bubble to the right */
+  }
+  
+  /* Crush's Message */
+  .crush-message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .crush-bubble {
+    background-color: #E4E6EB;
+    color: black;
+    align-self: flex-start; /* Keep the crush’s bubble on the left */
+    padding: 10px 15px;
+    border-radius: 35px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  
+  /* Profile Picture */
+  .crush-profile-pic {
+    margin-right: 10px;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Adjust Layout for Responsiveness */
+  @media (max-width: 768px) {
+    .chat-container {
+      width: 100%;
+      max-width: 500px; /* Make the chat container smaller on mobile */
+    }
+  
+    .form-control {
+      width: 250px; /* Make input fields smaller on mobile */
+    }
+  
+    .album-cover {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  
